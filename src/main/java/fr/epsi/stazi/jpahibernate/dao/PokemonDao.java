@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
 import fr.epsi.stazi.jpahibernate.model.Pokemon;
 
 public class PokemonDao extends GenericDao {
@@ -13,6 +15,7 @@ public class PokemonDao extends GenericDao {
 	 * @throws SQLException 
 	 */
 	public void insert(Pokemon pokemon) throws SQLException {
+		EntityManager entityManager = getEntityManager();
 		// TODO:
 	}
 
