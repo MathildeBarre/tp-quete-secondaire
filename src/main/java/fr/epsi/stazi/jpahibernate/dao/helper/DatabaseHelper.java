@@ -31,6 +31,8 @@ public class DatabaseHelper {
 	}
 	
 	public static void closeEntityManagerFactory() {
-		entityManagerFactory.close();
+		if (entityManagerFactory != null && entityManagerFactory.isOpen()) {
+			entityManagerFactory.close();
+		}
 	}
 }

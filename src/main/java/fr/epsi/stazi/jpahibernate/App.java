@@ -1,5 +1,7 @@
 package fr.epsi.stazi.jpahibernate;
 
+import fr.epsi.stazi.jpahibernate.dao.helper.DatabaseHelper;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -10,6 +12,8 @@ public class App {
 		// TODO: Récupérer le Pokemon d'id 9
 		
 		// TODO: Récupérer le Pokemon de numéro 12
+		
+		DatabaseHelper.closeEntityManagerFactory();
 	}
 
 }
