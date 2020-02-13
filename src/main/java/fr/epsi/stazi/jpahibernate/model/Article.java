@@ -22,12 +22,16 @@ import javax.persistence.Table;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "article")
 public class Article {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
-    
+
     @Column(name = "prix")
     protected float prix;
+
+    @Column(name = "libelle")
+    protected String libelle;
 
     /**
      * @return the id
@@ -49,5 +53,13 @@ public class Article {
     public void setPrix(float prix) {
         this.prix = prix;
     }
-    
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+
 }
